@@ -1,0 +1,15 @@
+{
+  "name": "triangle",
+  "type": "module",
+  "version": "0.1.0",
+  "files": [
+    "triangle_bg.wasm",
+    "triangle.js",
+    "triangle.d.ts"
+  ],
+  "main": "triangle.js",
+  "types": "triangle.d.ts",
+  "sideEffects": [
+    "./snippets/*"
+  ]
+}
