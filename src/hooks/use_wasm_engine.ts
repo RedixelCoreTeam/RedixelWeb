@@ -67,15 +67,40 @@ export function useWasmEngine(gameId: string) {
   useLayoutEffect(() => guardBodyFromWasmStyles(), []);
 
   useEffect(() => {
-    if (initialized.current) return;
+    const originalConsoleError = console.error;
+    const controller = new AbortController();
 
-    abortRef.current = false;
+    console.error = (...args) => {
+      originalConsoleError(...args);
 
-    runBootSequence();
+      if (!abortRef.current) {
+        setIsError(true);
+        setIsBooting(false);
+      }
+    };
+
+    const handleGlobalCrash = (event: Event) => {
+      originalConsoleError('Engine crashed asynchronously:', event);
+
+      if (!abortRef.current) {
+        setIsError(true);
+        setIsBooting(false);
+      }
+    };
+
+    window.addEventListener('error', handleGlobalCrash, { signal: controller.signal });
+    window.addEventListener('unhandledrejection', handleGlobalCrash, { signal: controller.signal });
+
+    if (!initialized.current) {
+      abortRef.current = false;
+      runBootSequence();
+    }
 
     return () => {
       abortRef.current = true;
       initialized.current = false;
+      console.error = originalConsoleError;
+      controller.abort();
     };
   }, [runBootSequence]);
 

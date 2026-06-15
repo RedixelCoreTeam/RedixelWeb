@@ -1,5 +1,7 @@
 # Redixel Web
 
+[![Online Playground](https://img.shields.io/badge/Online-Playground-orange?style=for-the-badge)](https://redixel-web.vercel.app/)
+
 Redixel Web is the official frontend and interactive playground for the [Redixel Game Engine](https://github.com/RedixelCoreTeam/Redixel).
 
 The primary goal of this repository is to demonstrate Redixel's cross-platform capabilities by running its native Rust games directly in the browser using **WebAssembly (WASM)** and **WebGPU**. It features a dynamic, CRT-themed UI that automatically catalogs and runs engine examples.
