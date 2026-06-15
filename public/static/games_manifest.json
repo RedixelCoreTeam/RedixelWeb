@@ -1,0 +1,40 @@
+[
+  {
+    "id": "pong",
+    "title": "Pong",
+    "description": "The classic reimagined. Showcasing deterministic physics and low-latency input handling.",
+    "tags": [
+      "Deterministic",
+      "2D_Collision"
+    ]
+  },
+  {
+    "id": "shooter",
+    "title": "Shooter",
+    "description": "A high-octane twin-stick arena shooter demonstrating manual entity management, collision handling, and a custom particle engine.",
+    "tags": [
+      "Physics",
+      "Particles",
+      "Top-Down"
+    ]
+  },
+  {
+    "id": "triangle",
+    "title": "Triangle",
+    "description": "A fundamental rendering test displaying a 2D colored triangle using the Redixel rendering pipeline.",
+    "tags": [
+      "2D",
+      "Rendering"
+    ]
+  },
+  {
+    "id": "triangle_3d",
+    "title": "Triangle 3D",
+    "description": "A rotating 3D triangle demonstrating mathematical projections, Z-sorting, and 3D transformations.",
+    "tags": [
+      "3D",
+      "Math",
+      "Projection"
+    ]
+  }
+]
