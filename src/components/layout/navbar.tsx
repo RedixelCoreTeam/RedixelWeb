@@ -40,11 +40,11 @@ export function Navbar() {
     }`;
 
   return (
-    <nav className='fixed top-0 z-50 mx-auto flex w-full max-w-full items-center justify-between border-surface-variant border-b bg-background/95 px-margin py-3 shadow-[0_4px_20px_rgba(255,180,172,0.05)] backdrop-blur-md'>
+    <nav className='fixed top-0 z-50 mx-auto flex w-full max-w-full items-center justify-between gap-sm border-surface-variant border-b bg-background/95 px-margin py-3 shadow-[0_4px_20px_rgba(255,180,172,0.05)] backdrop-blur-md'>
       <button
         type='button'
         onClick={scrollToTop}
-        className='cursor-pointer border-0 bg-transparent p-0 font-display-lg text-[32px] tracking-tighter drop-shadow-[0_0_20px_rgba(255,84,76,0.4),0_0_40px_rgba(255,84,76,0.5)]'
+        className='shrink-0 cursor-pointer border-0 bg-transparent p-0 font-display-lg text-[32px] tracking-tighter drop-shadow-[0_0_20px_rgba(255,84,76,0.4),0_0_40px_rgba(255,84,76,0.5)]'
       >
         <span className='bg-linear-to-b from-primary-fixed via-primary to-primary-container bg-clip-text text-transparent'>
           REDIXEL
@@ -73,7 +73,7 @@ export function Navbar() {
         href='https://github.com/RedixelCoreTeam/Redixel'
         target='_blank'
         rel='noopener noreferrer'
-        className='cursor-pointer border border-primary bg-transparent px-6 py-2 font-label-mono text-primary text-sm uppercase tracking-widest shadow-[0_0_10px_rgba(255,180,172,0.3)] transition-all hover:bg-primary hover:text-on-primary hover:shadow-[0_0_20px_rgba(255,181,158,0.6)]'
+        className='shrink-0 cursor-pointer border border-primary bg-transparent px-3 py-1.5 font-label-mono text-primary text-xs uppercase tracking-widest shadow-[0_0_10px_rgba(255,180,172,0.3)] transition-all hover:bg-primary hover:text-on-primary hover:shadow-[0_0_20px_rgba(255,181,158,0.6)] sm:px-6 sm:py-2 sm:text-sm'
       >
         SOURCE CODE
       </a>

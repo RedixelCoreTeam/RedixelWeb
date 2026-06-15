@@ -29,8 +29,8 @@ export function Hero() {
         aria-hidden
       />
 
-      <div className='relative z-10 mx-auto mt-[-5vh] flex w-full max-w-7xl px-margin'>
-        <div className='flex max-w-2xl flex-col items-start gap-margin text-left'>
+      <div className='relative z-10 mx-auto mt-[-5vh] flex w-full min-w-0 max-w-7xl px-margin'>
+        <div className='flex w-full min-w-0 max-w-2xl flex-col items-start gap-margin text-left'>
           <h1
             className='glitch-text relative mb-4 text-left font-bold font-display-lg text-[64px] text-primary leading-none tracking-tighter drop-shadow-[0_0_20px_rgba(255,84,76,0.6)] md:text-[140px]'
             data-text='REDIXEL'
@@ -51,7 +51,7 @@ export function Hero() {
           <button
             type='button'
             onClick={scrollToShowcase}
-            className='group mt-xl flex cursor-pointer items-center gap-2 border-2 border-primary bg-transparent px-10 py-4 font-label-mono text-lg text-primary uppercase tracking-[0.2em] transition-all duration-300 hover:bg-primary hover:text-on-primary hover:shadow-[0_0_30px_rgba(255,84,76,0.8)]'
+            className='group mt-lg flex cursor-pointer items-center gap-2 border-2 border-primary bg-transparent px-6 py-3 font-label-mono text-base text-primary uppercase tracking-[0.2em] transition-all duration-300 hover:bg-primary hover:text-on-primary hover:shadow-[0_0_30px_rgba(255,84,76,0.8)] md:mt-xl md:px-10 md:py-4 md:text-lg'
           >
             PLAY EXAMPLES
             <ArrowDownward className='h-6 w-6 text-primary transition-colors group-hover:text-on-primary' />

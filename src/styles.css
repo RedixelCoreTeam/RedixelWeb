@@ -52,6 +52,19 @@
   --radius-none: 0px;
 }
 
+@media (max-width: 767px) {
+  :root {
+    --spacing-gutter: 16px;
+    --spacing-margin: 16px;
+    --spacing-lg: 32px;
+    --spacing-xl: 48px;
+  }
+
+  html {
+    scrollbar-gutter: auto;
+  }
+}
+
 * {
   box-sizing: border-box;
 }

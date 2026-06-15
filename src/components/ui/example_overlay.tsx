@@ -78,20 +78,22 @@ export function ExampleOverlay({ open, onClose, title, children }: ExampleOverla
       />
 
       <header
-        className={`relative z-10 flex shrink-0 items-center justify-between border-surface-variant border-b px-margin py-3 ${headerClass}`}
+        className={`relative z-10 flex shrink-0 items-center justify-between gap-sm border-surface-variant border-b px-margin py-3 ${headerClass}`}
       >
-        <span className='font-label-mono text-on-surface-variant text-sm tracking-widest'>{title}</span>
+        <span className='min-w-0 flex-1 truncate pr-2 font-label-mono text-on-surface-variant text-xs tracking-widest sm:text-sm'>
+          {title}
+        </span>
         <button
           type='button'
           onClick={onClose}
-          className='cursor-pointer border border-surface-variant bg-transparent px-4 py-1.5 font-label-mono text-on-surface-variant text-sm tracking-widest transition-colors hover:border-primary hover:text-primary'
+          className='shrink-0 cursor-pointer border border-surface-variant bg-transparent px-3 py-1 font-label-mono text-on-surface-variant text-xs tracking-widest transition-colors hover:border-primary hover:text-primary sm:px-4 sm:py-1.5 sm:text-sm'
         >
           CLOSE
         </button>
       </header>
 
       <div
-        className={`relative z-10 flex min-h-0 flex-1 items-center justify-center overflow-hidden p-margin ${panelClass}`}
+        className={`relative z-10 flex min-h-0 min-w-0 flex-1 items-center justify-center overflow-hidden p-sm md:p-margin ${panelClass}`}
       >
         {ready && open && (
           <div
