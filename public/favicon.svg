@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Redixel">
+  <defs>
+    <radialGradient id="bg" cx="32" cy="28" r="34" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#22161b" />
+      <stop offset="1" stop-color="#0f0a0d" />
+    </radialGradient>
+
+    <linearGradient id="letter" x1="32" y1="12" x2="32" y2="52" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ffd8d2" />
+      <stop offset="0.45" stop-color="#f2b0a6" />
+      <stop offset="1" stop-color="#d9867c" />
+    </linearGradient>
+
+    <filter id="letter-glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="1.4" result="blur" />
+      <feColorMatrix
+        in="blur"
+        type="matrix"
+        values="1 0 0 0 0  0 0.2 0 0 0  0 0 0.2 0 0  0 0 0 0.45 0"
+        result="glow"
+      />
+      <feMerge>
+        <feMergeNode in="glow" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <clipPath id="letter-clip">
+      <path
+        fill-rule="evenodd"
+        d="M15 12h23.2c6.8 0 11.2 4.2 11.2 10.2 0 3.6-1.8 6.6-5 8l-.2.2c4.2.8 7 4 7 8.8V52h-8v-9.6c0-3.6-2.2-5.8-6-5.8H23V52h-8V12zm8 6.4v8.8h11.6c3.2 0 5-1.8 5-4.6 0-2.6-1.8-4.2-5-4.2H23z"
+      />
+    </clipPath>
+
+    <pattern id="scanlines" width="4" height="4" patternUnits="userSpaceOnUse">
+      <rect width="4" height="1.25" y="2.75" fill="#000000" fill-opacity="0.11" />
+    </pattern>
+  </defs>
+
+  <rect width="64" height="64" rx="12" fill="url(#bg)" />
+  <rect x="1" y="1" width="62" height="62" rx="11" fill="none" stroke="#ff544c" stroke-opacity="0.12" />
+
+  <g filter="url(#letter-glow)">
+    <path
+      fill-rule="evenodd"
+      fill="url(#letter)"
+      d="M15 12h23.2c6.8 0 11.2 4.2 11.2 10.2 0 3.6-1.8 6.6-5 8l-.2.2c4.2.8 7 4 7 8.8V52h-8v-9.6c0-3.6-2.2-5.8-6-5.8H23V52h-8V12zm8 6.4v8.8h11.6c3.2 0 5-1.8 5-4.6 0-2.6-1.8-4.2-5-4.2H23z"
+    />
+  </g>
+
+  <rect width="64" height="64" fill="url(#scanlines)" clip-path="url(#letter-clip)" />
+
+  <g clip-path="url(#letter-clip)" opacity="0.55">
+    <path
+      fill="#5fe9f0"
+      d="M13.2 18.2h1.4v1.4h-1.4zm0 4.4h1.4v1.4h-1.4zm0 4.6h1.4v1.4h-1.4z"
+    />
+    <path fill="#5fe9f0" fill-opacity="0.35" d="M48.8 27.2h1.1v1.1h-1.1z" />
+  </g>
+
+  <path
+    fill="#ffffff"
+    fill-opacity="0.08"
+    clip-path="url(#letter-clip)"
+    d="M15 12h23.2c6.8 0 11.2 4.2 11.2 10.2 0 3.6-1.8 6.6-5 8l-.2.2c4.2.8 7 4 7 8.8V30H23V12z"
+  />
+</svg>
